@@ -1,0 +1,1 @@
+This repo has acouple of python files to add entries into and read from a mongodb. the docker-compose.yml builds the mongodb and mongo-express servers in docker.

@@ -10,11 +10,11 @@ db = client.plants
 live = db.live
 
 # find and delete if entry already created
-query = { 'name':'guinea chestnut' }
+query = { 'name':'aroid palm' }
 live.delete_one(query)
 
 # create record
-record = {'name':'guinea chestnut', 'origin':'brazil', 'price':'4', 'toxicity': ['non-toxic']}
+record = {'name':'aroid palm', 'origin':'kenya', 'price':'5', 'toxicity': ['people','pets']}
 
 #insert the record
 rec = db.live.insert_one(record)

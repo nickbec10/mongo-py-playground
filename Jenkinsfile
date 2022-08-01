@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'echo $PATH'
                 sh 'python --version'
-                sh 'pip install paramiko'
+                sh 'pip install paramiko --user'
                 sh 'virtualenv venv && . venv/bin/activate && pip install pymongo'
             }
         }

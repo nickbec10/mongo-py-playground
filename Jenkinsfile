@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'echo $PATH'
                 sh 'python --version'
+                sh 'pip install paramiko'
                 sh 'virtualenv venv && . venv/bin/activate && pip install pymongo'
             }
         }

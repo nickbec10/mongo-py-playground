@@ -1,12 +1,13 @@
 pipeline {
-    agent { docker { image 'python:3.10.5-alpine' } }
+    agent none
     stages {
         stage('build') {
+            agent { docker { image 'python:3.10.5-alpine' } }
             steps {
                 sh 'echo $PATH'
-                sh 'python --version'
-                sh 'pip install paramiko --user'
-                sh 'virtualenv venv && . venv/bin/activate && pip install pymongo'
+                withEnv(["HOME=${env.WORKSPACE}"]) {
+                    sh 'pip install pymongo'
+                }
             }
         }
         stage('test') {

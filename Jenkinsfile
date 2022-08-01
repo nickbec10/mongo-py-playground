@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'pip install pymongo -u Jenkins'
+                sh 'pip install --user pymongo'
                 sh 'python3 add_plant.py'
             }
         }

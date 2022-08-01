@@ -10,8 +10,8 @@ db = client.plants
 live = db.live
 
 # find and delete if entry already created
-query = { 'name':'aroid palm' }
-live.delete_one(query)
+#query = { 'name':'aroid palm' }
+#live.delete_one(query)
 
 # create record
 record = {'name':'aroid palm', 'origin':'kenya', 'price':'5', 'toxicity': ['people','pets']}

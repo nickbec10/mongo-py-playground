@@ -11,7 +11,9 @@ pipeline {
         }
         stage('test') {
             steps {
-                sh 'python add_plant.py'
+                withEnv(["HOME=${env.WORKSPACE}"]) {
+                    sh 'python add_plant.py'
+                }
             }
         }
         stage('deploy') {

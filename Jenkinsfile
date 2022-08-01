@@ -12,7 +12,7 @@ pipeline {
         stage('test') {
             steps {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
-                    sh 'python add_plant.py'
+                    sh 'python socket_stuff.py'
                 }
             }
         }

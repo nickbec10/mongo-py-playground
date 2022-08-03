@@ -37,7 +37,8 @@ HOSTS = [
     'nextcloud.atomictinker.com',
     'pymotw.com',
     'www.python.org',
-    'nosuchname',
+    'apod.nasa.gov',
+    'nosuchname'
 ]
 
 for host in HOSTS:
